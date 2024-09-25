@@ -1,0 +1,10 @@
+{
+    "name": "Bloons",
+    "websiteUrl": "",
+    "description": "Adds several differently colored balloons in the Dreaming to emphasize shooting skills.",
+    "loaders": [],    
+    "dependencies": [
+        "BepInEx-BepInExPack-5.4.2100"
+    ],
+    "version_number": "1.0.0"
+}

@@ -1,0 +1,42 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net46</TargetFramework>
+    <AssemblyName>Bloons</AssemblyName>
+    <Description>Balloons!</Description>
+    <Version>1.0.0</Version>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <LangVersion>latest</LangVersion>
+    <RestoreAdditionalProjectSources>
+      https://api.nuget.org/v3/index.json;
+      https://nuget.bepinex.dev/v3/index.json;
+      https://nuget.samboy.dev/v3/index.json
+    </RestoreAdditionalProjectSources>
+    <RootNamespace>Bloons</RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Wolfire">
+      <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Receiver 2\Receiver2_Data\Managed\Wolfire.dll</HintPath>
+    </Reference>
+    <Reference Include="Wolfire.Receiver2">
+      <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Receiver 2\Receiver2_Data\Managed\Wolfire.Receiver2.dll</HintPath>
+    </Reference>
+    <Reference Include="FMODDef">
+      <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Receiver 2\Receiver2_Data\Managed\FMODDef.dll</HintPath>
+    </Reference>
+    <Reference Include="SimpleJSON">
+      <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Receiver 2\Receiver2_Data\Managed\SimpleJSON.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="BepInEx.Analyzers" Version="1.*" PrivateAssets="all" />
+    <PackageReference Include="BepInEx.Core" Version="5.*" IncludeAssets="compile" />
+    <PackageReference Include="BepInEx.PluginInfoProps" Version="2.*" />
+    <PackageReference Include="HarmonyX" Version="2.12.0" />
+	<PackageReference Include="UnityEngine.Modules" Version="2019.4.29" IncludeAssets="compile" />
+  </ItemGroup>
+
+  <ItemGroup Condition="'$(TargetFramework.TrimEnd(`0123456789`))' == 'net'">
+    <PackageReference Include="Microsoft.NETFramework.ReferenceAssemblies" Version="1.0.2" PrivateAssets="all" />
+  </ItemGroup>
+</Project>
